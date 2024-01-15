@@ -1,0 +1,15 @@
+{
+  "name": "templates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "tailwindcss build ../static/css/Style.css -o ../static/component/outStyle.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwind": "^4.0.0"
+  }
+}
