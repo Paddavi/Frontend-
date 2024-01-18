@@ -9,6 +9,7 @@
     <title>Snap Page</title>
 </head>
 <body class="bg-white font-sans flex items-center justify-center h-screen">
+    <!-- Rules-section -->
     <div class="bg-blue-500 text-white p-4 rounded mr-16">
         <h2 class="text-lg font-semibold mb-2">Rules</h2>
         <ul id="snap" class="list-disc pl-4">
@@ -17,10 +18,13 @@
             <li>Rule 3: Do not allow anyone near you during the exam.</li>
         </ul>
     </div>
+    <!-- main-section -->
     <div class="bg-white p-8 border-2 rounded shadow-xl flex flex-col items-center">
+        <!-- heading -->
         <div class="p-4 rounded mb-4">
             <h1 class="text-2xl font-bold">Take a Snap</h1>
         </div>
+        <!-- camera image -->
         <div id="video-container" class="w-full max-w-lg mb-10">
             <video id="video" class="w-full h-auto" autoplay playsinline></video>
         </div>
@@ -34,6 +38,7 @@
     const videoContainer = document.getElementById("video-container");
     const video = document.getElementById("video");
     const captureBtn = document.getElementById("captureBtn");
+    // taking allow of the camera
     async function getMedia() {
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
@@ -42,6 +47,7 @@
             console.error("Error accessing media devices:", error);
         }
     }
+    // capture the image and saved in the database
     getMedia();
     captureBtn.addEventListener("click", function () {
         const canvas = document.createElement("canvas");
